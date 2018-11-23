@@ -1,0 +1,13 @@
+<h1>  Hey! Thanks for checking out the page.  Here's the recipe.  Bon Apetit!</h1>
+<body>
+<p> <%=@recipe.name %> </p>
+<p> <%=@recipe.ingredients %> </p>
+<p> <%=@recipe.cook_time %> </p>
+
+<p>  Change your mind on this one?  Delete me here </p>
+<form method = "POST" action = "/recipes/<%=@recipe.id%>">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <p> <input type="submit" value="delete"> </p>
+</form>
+
+</body>
